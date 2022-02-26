@@ -1,12 +1,27 @@
 <template>
   <div id="app">
+    <myheader></myheader>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link> /
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <myfooter></myfooter>
   </div>
 </template>
+
+<script>
+import myheader from './components/myheader'
+import myfooter from './components/myfooter'
+
+export default {
+  //name: 'App',
+  components: {
+    myheader,
+    myfooter
+  },
+}
+</script>
 
 <style>
 #app {
