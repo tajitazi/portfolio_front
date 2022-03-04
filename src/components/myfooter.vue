@@ -6,10 +6,10 @@
     <!-- ナビゲーション -->
     <ul class="nav justify-content-center mb-3">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
+        <a class="nav-link" href="/about">Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Skill</a>

@@ -61,30 +61,75 @@
       <!-- / メインビジュアル -->
       <!-- コンテンツ01 -->
       <div class="py-4">
-      
+      {{responseApi}}
       </div>
       <!-- /コンテンツ01 -->
-      <!-- コンテンツ02 -->
-      <div class="py-4">
-      
-      </div>
-      <!-- /コンテンツ02 -->
-      <!-- コンテンツ03 -->
-      <div class="py-4">
-      
-      </div>
-      <!-- /コンテンツ03 -->
-      <!-- コンテンツ04 -->
-      <div class="py-4">
-      
-      </div>
-      <!-- /コンテンツ04 -->
-      <!-- コンテンツ05 -->
-      <div class="py-4">
-      
-      </div>
-      <!-- /コンテンツ05 -->
+      <div class="py-4 bg-light">
+        <section id="topPage">
+          <div class="container">
+            <!-- 上段 -->
+            <div class="row mb-4">
+              <div class="col-md-12 mb-3">
+                <h3 class="mb-3">ポートフォリオタイトル</h3>
+                <p>このポートフォリオでは、私のプロフィール・スキル・業務経歴についてまとめさせていただきました。</p>
+              </div>
+            </div>
+            <!-- /上段 -->
+            <!-- 下段 -->
+            <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <a href="/about">
+                  <img src="../assets/profile_top.png" alt="Profile" class="img-fluid">
+                </a>
+                <div class="card-body d-flex justify-content-between">
+                  <h4 class="card-title">Profile</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <a href="/skill">
+                  <img src="../assets/skill_top.png" alt="Skill" class="img-fluid">
+                </a>
+                <div class="card-body d-flex justify-content-between">
+                  <h4 class="card-title">Skill</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-3">
+                <a href="/work">
+                  <img src="../assets/work_top.png" alt="Work" class="img-fluid">
+                </a>
+                <div class="card-body d-flex justify-content-between">
+                  <h4 class="card-title">Work</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /下段 -->
+        </div>
+      </section>
+    </div>
     </main>   
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data(){
+    return{
+      responseApi: ""
+    }
+  },
+  mounted(){
+    axios
+      .get('http://127.0.0.1:8000/api/history_list')
+      .then(response => (this.responseApi = response))
+  }
+}
+</script>
   
